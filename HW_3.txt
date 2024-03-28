@@ -1,0 +1,19 @@
+1.
+SELECT * FROM products;
+SELECT name, phone FROM shippers;
+2.
+SELECT AVG(price) AS average_price, MAX(price) AS max_price, MIN(price) AS min_price
+FROM products;
+3.
+SELECT distinct category_id, price
+FROM products
+order by price desc
+limit 10;
+4.
+SELECT COUNT(*) AS total
+FROM products
+where price > 20 and price < 100;
+5.
+SELECT supplier_id, COUNT(id) AS counted_products, avg(price) AS average_price
+FROM products
+group by supplier_id;
